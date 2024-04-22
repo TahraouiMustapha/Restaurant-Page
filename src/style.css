@@ -60,6 +60,7 @@ button {
 
 .title {
     font-size: 1.3em;
+    margin-bottom: 1em;
 }
 
 .plate, .person {
@@ -91,3 +92,6 @@ button {
     font-weight: 600;
 }
 
+.clicked {
+    border: 3px solid maroon;
+}

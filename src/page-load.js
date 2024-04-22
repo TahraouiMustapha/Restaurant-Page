@@ -4,16 +4,21 @@ function pageLoader (image) {
 
     const headLine = document.createElement('h2');
     headLine.textContent = 'Welcome in our Restaurant';
+    headLine.classList.add('title');
     myDiv.appendChild(headLine);
     
     const sometxt = document.createElement('p');
     sometxt.textContent = 'some text about how wonderful the restaurant is';
+    sometxt.classList.add('plate');
     myDiv.appendChild(sometxt);
     
-    const myImage = new Image();
-    myImage.src = image;
-    myImage.width = 120;
-    myDiv.appendChild(myImage);
+
+    const body = document.body;
+    console.log(body);
+    body.style.backgroundImage = `url(${image})`;
+    body.style.backgroundRepeat = 'no-repeat';
+    body.style.backgroundSize = 'cover';
+    body.style.backgroundPositionY = '70%';
 
 
     content.appendChild(myDiv);

@@ -9,20 +9,29 @@ pageLoader(image);
 const homeBtn = document.querySelector('#homeBtn'); 
 const menuBtn = document.querySelector('#menuBtn'); 
 const aboutBtn = document.querySelector('#aboutBtn'); 
-homeBtn.onclick = () => {  
+homeBtn.onclick = (e) => {  
     const content = document.querySelector('#content');
     content.innerHTML = ''; 
+    e.target.classList.add('clicked');
+    menuBtn.classList.remove('clicked');
+    aboutBtn.classList.remove('clicked');
     pageLoader(image);
 };
 
-menuBtn.onclick = () => {  
+menuBtn.onclick = (e) => {  
     const content = document.querySelector('#content');
     content.innerHTML = ''; 
+    e.target.classList.add('clicked');
+    homeBtn.classList.remove('clicked');
+    aboutBtn.classList.remove('clicked');
     menuLoader();
 };
 
-aboutBtn.onclick = () => {  
+aboutBtn.onclick = (e) => {  
     const content = document.querySelector('#content');
     content.innerHTML = ''; 
+    e.target.classList.add('clicked');
+    menuBtn.classList.remove('clicked');
+    homeBtn.classList.remove('clicked');
     contactLoader();
 };
